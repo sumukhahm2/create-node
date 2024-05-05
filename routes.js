@@ -1,6 +1,7 @@
 const fs=require("fs")
 
-const requestHandler=(req,res)=>{
+function requestHandler(req,res){
+   console.log('inside route')
     const url=req.url
     const method=req.method
     if(url=='/home')
@@ -59,4 +60,5 @@ const requestHandler=(req,res)=>{
      res.end()
     
    }
-   exports =requestHandler
+   
+   module.exports=requestHandler

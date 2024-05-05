@@ -1,8 +1,16 @@
 const http=require('http');
 //const fs=require('fs')
 
-const route=require('./route')
+const routes=require('./routes')
+console.log(routes)
+const server=http.createServer(routes);
 
-const server=http.createServer(route);
-
-server.listen(3000)
+server.listen(3000,function(error){
+    if(error)
+    {
+       console.log(error)
+    }
+    else{
+       console.log('success')
+    }
+})
